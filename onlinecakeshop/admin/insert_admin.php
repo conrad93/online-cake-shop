@@ -12,6 +12,6 @@ if (mysqli_num_rows($query) > 0) {
 }
 else {
 	mysqli_query($conn, $insert);
-	header("Location: dashboard.php");
+	header("Location: index.php");
 }
 ?>
