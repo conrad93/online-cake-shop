@@ -149,7 +149,7 @@ else {
                     </div>
                 </div>
 
-                <div class="row mx-5">
+                <div class="row m-5">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 text-center">
                         <h1>Our Categories</h1>
                     </div>
@@ -165,7 +165,7 @@ else {
                                 <div class="card h-100">
                                     <div class="card-body">
                                         <h3 class="card-title"><?php echo $res['category_name'];?></h3>
-                                        <a href="shop.php?<?php echo $res['category_name'];?>=<?php echo $res['category_id'];?>"><img class="card-img" src="uploads/<?php echo $res['category_image'];?>"></a>
+                                        <a href="shop.php?category=<?php echo $res['category_id'];?>"><img class="card-img" src="uploads/<?php echo $res['category_image'];?>"></a>
                                     </div>
                                     
                                 </div>
