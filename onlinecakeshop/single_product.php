@@ -54,11 +54,18 @@ else {
                         <li class="nav-item dropdown">
                             <a class="nav-link active" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop</a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink1">
-                                <a class="dropdown-item" href="shop.php?Cakes=5">Cakes</a>
-                                <a class="dropdown-item" href="shop.php?Pastries=6">Pastries</a>
-                                <a class="dropdown-item" href="shop.php?Cookies=7">Cookies</a>
-                                <a class="dropdown-item" href="shop.php?Savoury=8">Savoury</a>
-                                <a class="dropdown-item" href="shop.php?Desserts=9">Desserts</a>
+                            <?php
+                            require_once('config.php');
+                            $select = "SELECT * FROM cake_shop_category";
+                            $query = mysqli_query($conn, $select);
+                            while ($res = mysqli_fetch_assoc($query)) {
+                            ?>
+                                <a class="dropdown-item" href="shop.php?category=<?php echo $res['category_id'];?>">
+                                    <?php echo $res['category_name'];?>
+                                </a>
+                            <?php
+                            }
+                            ?>
                             </div>
                         </li>
                         <li class="nav-item">
