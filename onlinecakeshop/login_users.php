@@ -1,7 +1,7 @@
 <?php
 if (isset($_GET['login_error']) && $_GET['login_error'] == 1) {
     echo "<script>alert('Username or Password does not exist!')</script>";
-    echo "<script>window.location.assign('login.php')</script>";
+    echo "<script>window.location.assign('login_users.php')</script>";
 }
 ?>
 <!doctype html>
