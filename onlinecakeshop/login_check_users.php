@@ -12,6 +12,6 @@ if (mysqli_num_rows($query) > 0) {
 	header("Location: index.php?login_success=1");
 } 
 else {
-	header("Location: login.php?login_error=1");
+	header("Location: login_users.php?login_error=1");
 }
 ?>
